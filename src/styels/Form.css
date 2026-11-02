@@ -1,0 +1,76 @@
+.Form{
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 18px 8px 8px 8px;
+    font-family: "Inter Tight", monospace, sans-serif;
+    font-size: 1em;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    & label {
+        & span{
+            margin: 0 8px 12px 0;
+            display: inline-block;
+        }
+
+        & input{
+            padding: 12px 8px;
+            border-radius: 4px;
+            border: 0.5px solid black;
+        }
+    }
+    
+    .Form__name{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+        & label {
+            display: block;
+            & input{
+            width: 100%;
+            }
+        }
+    }
+
+    .Form__email{
+        & label input{
+            width: 100%;
+        }
+    }
+    .Form__phone{
+        & label input{
+            width: 100%;
+        }
+    }
+
+    .Form__Btn--submit{
+        width: fit-content;
+        padding: 13px;
+        border: 1px solid black;
+        border-radius: 8px;
+        background-color: black;
+        color: white;
+        margin-top: 16px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: transparent;
+            color: black;
+            transition: ease-in-out 0.25s ;
+        }
+    }
+
+    @media (width <= 800px){
+        .Form__name{
+            & label {
+                width: 100%;
+                & input{
+                width: 100%;
+                }
+            }
+        }
+    }
+}
